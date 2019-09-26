@@ -12,7 +12,7 @@ class Song
 
   def self.create
     song = Song.create
-    song.name = song_name
+    song.name = song_name # Song.all.include?(song) #=> true
     song
   end
 
