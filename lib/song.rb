@@ -11,13 +11,15 @@ class Song
   end
 
   def self.create
-    song = Song.create
-    song.name = song_name # Song.all.include?(song) #=> true
+    song = Song.new
+    song.save
     song
   end
 
   def self.new_by_name
-
+    song = Song.create
+    song.name = song_name # Song.all.include?(song) #=> true
+    song
   end
 
   def self.find_by_name
